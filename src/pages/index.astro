@@ -1,19 +1,20 @@
 ---
+import Experience from "../components/Experience.astro";
 import Layout from "../layouts/Layout.astro";
 const META_DESCRIPTION =
-	"Explore the web development prowess of [Your Name], a skilled and innovative web developer with a passion for crafting " +
-	"exceptional online experiences. With [number] years in the field, [Your Name] has honed expertise in front-end and " +
+	"Explore the web development prowess of Guillermo, a skilled and innovative web developer with a passion for crafting " +
+	"exceptional online experiences. With several years in the field, Guillermo has honed expertise in front-end and " +
 	"back-end technologies, creating seamless and visually stunning websites. Dive into a portfolio showcasing a diverse range " +
 	"of projects, from responsive designs to dynamic web applications, each meticulously developed with a focus on user " +
-	"experience and cutting-edge technology. Join [Your Name] on a journey through the digital realm, where every line of code " +
+	"experience and cutting-edge technology. Join Guillermo on a journey through the digital realm, where every line of code " +
 	"is a testament to a commitment to excellence and a dedication to pushing the boundaries of web development.";
 ---
 
 <Layout title="Portfolio - Guillermo Casal Caro" description={META_DESCRIPTION}>
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44 flex flex-col gap-4">
+		<section class="w-full mx-auto lg:w-[740px] pt-44 flex flex-col gap-4">
 			<img
-				class="rounded-full w-20 mb-4 border-white border-2 border-opacity-30"
+				class="rounded-full size-20 mb-4 border-white border-2 border-opacity-30"
 				src="/me.jpeg"
 				alt="Avatar"
 			/>
@@ -25,33 +26,6 @@ const META_DESCRIPTION =
 				personal raccoon I adopted as girlfriend.
 			</h2>
 		</section>
-		<section class="w-full mx-auto lg:w-[740px] py-44 flex flex-col gap-4">
-			<img
-				class="rounded-full w-20 mb-4 border-white border-2 border-opacity-30"
-				src="/me.jpeg"
-				alt="Avatar"
-			/>
-			<h1 class="text-5xl font-bold">Hello, I'm Guillermo.</h1>
-			<h2 class="text-2xl text-wrap">
-				Full-Stack developer. Based on Sevilla, Spain. I like to learn
-				all about technologies. In my free time I love reading fantasy
-				books and practicing some boxing. I also love taking care of my
-				personal raccoon I adopted as girlfriend.
-			</h2>
-		</section>
-		<section class="w-full mx-auto lg:w-[740px] py-44 flex flex-col gap-4">
-			<img
-				class="rounded-full w-20 mb-4 border-white border-2 border-opacity-30"
-				src="/me.jpeg"
-				alt="Avatar"
-			/>
-			<h1 class="text-5xl font-bold">Hello, I'm Guillermo.</h1>
-			<h2 class="text-2xl text-wrap">
-				Full-Stack developer. Based on Sevilla, Spain. I like to learn
-				all about technologies. In my free time I love reading fantasy
-				books and practicing some boxing. I also love taking care of my
-				personal raccoon I adopted as girlfriend.
-			</h2>
-		</section>
+		<Experience class="w-full mx-auto lg:w-[740px]" />
 	</main>
 </Layout>

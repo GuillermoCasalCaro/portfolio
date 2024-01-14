@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const { class: classname } = Astro.props;
+---
+
+<section class={`items-center py-16 font-poppins ${classname}`}>
+    <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+        <div class="w-full mx-auto lg:max-w-3xl">
+            <h1 class="text-2xl font-bold pb-8">Experience</h1>
+            <ExperienceItem
+                date="Feb/2019 - Present"
+                place="Unit4"
+                title="React + .Net Developer"
+                description={"I develop an internal product using .Net 6.0 for backend, React " +
+                    "for frontend, and deployed with Azure services. We use a " +
+                    "microservice architecture. We also are responsible of our deploy " +
+                    "pipelines (CI/CD)."}
+            />
+        </div>
+    </div>
+</section>

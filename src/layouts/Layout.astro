@@ -9,9 +9,9 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const dark = "#252A34";
-const darkSemi = "#393E46";
-const lightSemi = "#00ADB5";
+// const dark = "#252A34";
+// const darkSemi = "#393E46";
+// const lightSemi = "#00ADB5";
 const light = "#F9F7F7";
 ---
 
@@ -34,7 +34,7 @@ const light = "#F9F7F7";
 		<slot />
 	</body>
 </html>
-<style is:global define:vars={{ dark, light }}>
+<style is:global define:vars={{ light }}>
 	:root {
 		color-scheme: light dark;
 	}
