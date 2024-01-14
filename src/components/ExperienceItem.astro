@@ -6,7 +6,7 @@ interface Props {
     company: string;
 }
 
-const { date, title, description } = Astro.props;
+const { date, title, description, company } = Astro.props;
 ---
 
 <div class="relative flex justify-between">
@@ -55,7 +55,9 @@ const { date, title, description } = Astro.props;
         </div>
         <div class="relative z-20 p-6">
             <p class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
-                {title}
+                {title} at <span class="text-yellow-700 dark:text-yellow-400"
+                    >{company}</span
+                >
             </p>
             <p class="text-gray-700 dark:text-gray-500">
                 {description}
