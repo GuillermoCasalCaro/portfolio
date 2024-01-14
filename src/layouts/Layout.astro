@@ -1,9 +1,17 @@
 ---
+import Header from "../components/Header.astro";
+import "@fontsource/lato";
+import "@fontsource-variable/roboto-slab";
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const dark = "#252A34";
+const darkSemi = "#393E46";
+const lightSemi = "#00ADB5";
+const light = "#F9F7F7";
 ---
 
 <!doctype html>
@@ -16,36 +24,29 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative">
+		<div
+			class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+		<Header />
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style is:global define:vars={{ dark, light }}>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: light dark;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: "Lato", system-ui, sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	h1 {
+		font-family: "Roboto Slab Variable", system-ui, sans-serif;
+	}
+	body {
+		color: var(--light);
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
 	}
 </style>
