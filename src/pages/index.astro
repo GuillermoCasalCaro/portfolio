@@ -1,9 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+const META_DESCRIPTION =
+	"Explore the web development prowess of [Your Name], a skilled and innovative web developer with a passion for crafting " +
+	"exceptional online experiences. With [number] years in the field, [Your Name] has honed expertise in front-end and " +
+	"back-end technologies, creating seamless and visually stunning websites. Dive into a portfolio showcasing a diverse range " +
+	"of projects, from responsive designs to dynamic web applications, each meticulously developed with a focus on user " +
+	"experience and cutting-edge technology. Join [Your Name] on a journey through the digital realm, where every line of code " +
+	"is a testament to a commitment to excellence and a dedication to pushing the boundaries of web development.";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio - Guillermo Casal Caro" description={META_DESCRIPTION}>
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44 flex flex-col gap-4">
 			<img
