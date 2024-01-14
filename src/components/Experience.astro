@@ -2,20 +2,65 @@
 import ExperienceItem from "./ExperienceItem.astro";
 
 const { class: classname } = Astro.props;
+const calculateMonths = (startDate: string) => {
+    const start = new Date(startDate);
+    const end = new Date();
+
+    const diffInMonths =
+        (end.getFullYear() - start.getFullYear()) * 12 +
+        (end.getMonth() - start.getMonth());
+
+    const years = Math.floor(diffInMonths / 12);
+    const months = diffInMonths % 12;
+
+    const formattedDuration = `${
+        years > 0 ? `${years} year${years > 1 ? "s" : ""}` : ""
+    } ${months > 0 ? `${months} month${months > 1 ? "s" : ""}` : ""}`;
+
+    return formattedDuration.trim();
+};
 ---
 
 <section id="experience" class={`items-center py-16 font-poppins ${classname}`}>
+    <h1 class="text-2xl font-bold pb-8">Experience</h1>
     <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
         <div class="w-full mx-auto lg:max-w-3xl">
-            <h1 class="text-2xl font-bold pb-8">Experience</h1>
             <ExperienceItem
-                date="Feb/2019 - Present"
+                date={`Oct 2021 – Present (${calculateMonths("2021-09-16")})`}
                 company="Unit4"
                 title="React + .Net Developer"
                 description={"I develop an internal product using .Net 6.0 for backend, React " +
                     "for frontend, and deployed with Azure services. We use a " +
                     "microservice architecture. We also are responsible of our deploy " +
                     "pipelines (CI/CD)."}
+            />
+            <ExperienceItem
+                date="Jan 2020 – Oct 2021 (1 year 9 months)"
+                company="Avanade"
+                title="Administration and support of OSISoft PI-System solution"
+                description={"At the beginning of the year I started this new project. In which I " +
+                    "am learning how the monitoring of network servers works " +
+                    "throughout the Plant Information System from OsiSoft (PI " +
+                    "System). I develop applications using OSISoft libraries in C# and " +
+                    "VB in Visual Studio."}
+            />
+            <ExperienceItem
+                date="Feb 2019 – Jan 2020 (10 months)"
+                company="Avanade"
+                title="RPA Developer"
+                description={"At Avanade I work together with Accenture developing projects " +
+                    "for external and internal clients. My main role is to automate " +
+                    "business processes using RPA technologies such as BluePrism or " +
+                    "similar. I work with Visual Basic and C# (.NET) to surpass " +
+                    "BluePrism lacks."}
+            />
+            <ExperienceItem
+                date="Oct 2017 – Jul 2018 (9 months)"
+                company="Zelenza"
+                title="Support Help (Area of I&C and FLM)"
+                description={"I was pursuing a six-month work scholarship for the subject Practices of Companies. " +
+                    "I worked automating common day-to-day processes in the company through Visual Basic Applications. " +
+                    "Subsequently I extended the contract for 3 more months."}
             />
         </div>
     </div>
