@@ -1,5 +1,6 @@
 ---
-import ButtonPill from "./ButtonPill.astro";
+import DropdownButton from "./DropdownButton.astro";
+import ButtonPill from "./PillButton.astro";
 import GithubIcon from "./icons/Github.astro";
 import LinkedInIcon from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
@@ -25,15 +26,16 @@ import Mail from "./icons/Mail.astro";
         development.
     </h2>
     <div class="w-full mt-8 flex flex-wrap justify-center gap-4">
-        <ButtonPill src={"https://github.com/GuillermoCasalCaro"}>
-            <GithubIcon />{"Github"}
-        </ButtonPill>
         <ButtonPill
-            src={"https://www.linkedin.com/in/guillermo-casal-caro-4b661711b/"}
+            href={"https://www.linkedin.com/in/guillermo-casal-caro-4b661711b/"}
         >
             <LinkedInIcon />{"LinkedIn"}
         </ButtonPill>
-        <ButtonPill src={"mailto:guillermo.casal.caro@gmail.com"}>
+        <ButtonPill href={"https://github.com/GuillermoCasalCaro"}>
+            <GithubIcon />{"Github"}
+        </ButtonPill>
+        <DropdownButton />
+        <ButtonPill href={"mailto:guillermo.casal.caro@gmail.com"}>
             <Mail />{"guillermo.casal.caro@gmail.com"}
         </ButtonPill>
     </div>

@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import "@fontsource/lato";
 import "@fontsource-variable/roboto-slab";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -24,6 +25,10 @@ const light = "#F9F7F7";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+			rel="stylesheet"
+		/>
 	</head>
 	<body class="relative">
 		<div
@@ -32,6 +37,10 @@ const light = "#F9F7F7";
 		</div>
 		<Header />
 		<slot />
+		<Footer />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
+		></script>
 	</body>
 </html>
 <style is:global define:vars={{ light }}>

@@ -1,0 +1,58 @@
+---
+import SpainFlag from "./icons/flags/ES.astro";
+import EnglishFlag from "./icons/flags/GB.astro";
+---
+
+<button
+    id="dropdownDefaultButton"
+    data-dropdown-toggle="dropdown"
+    data-dropdown-placement="bottom-end"
+    data-dropdown-offset-skidding={40}
+    class="relative min-w-min inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xl font-medium text-gray-900 rounded-full group bg-gradient-to-br from-purple-900 to-blue-800 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-900"
+    type="button"
+>
+    <span
+        class="inline-flex min-h-[52px] h-full min-w-min items-center relative gap-3 px-5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
+    >
+        Download CV
+        <svg
+            class="size-4"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+        </svg>
+    </span>
+</button>
+
+<!-- Dropdown menu -->
+<div
+    id="dropdown"
+    class="z-10 hidden p-0.5 rounded-lg text-gray-900 group bg-gradient-to-br from-purple-900 to-blue-800 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-900"
+>
+    <ul class="bg-opacity-100" aria-labelledby="dropdownDefaultButton">
+        <li>
+            <a
+                href="https://drive.google.com/file/d/18mLaHR4WnH2xK97MVF45o1hWZG0S8vZh/view?usp=sharing"
+                target="_blank"
+                class="flex items-center gap-2 px-4 py-2 rounded-t-lg bg-gray-900 hover:bg-opacity-0 transition-all ease-in duration-75"
+                ><EnglishFlag class="size-5" /> English</a
+            >
+        </li>
+        <li>
+            <a
+                href="https://drive.google.com/file/d/18mLaHR4WnH2xK97MVF45o1hWZG0S8vZh/view?usp=sharing"
+                target="_blank"
+                class="flex items-center gap-2 px-4 py-2 rounded-b-lg bg-gray-900 hover:bg-opacity-0 transition-all ease-in duration-75"
+                ><SpainFlag class="size-5" /> Spanish</a
+            >
+        </li>
+    </ul>
+</div>
