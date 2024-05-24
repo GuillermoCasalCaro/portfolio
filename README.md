@@ -1,3 +1,5 @@
+https://gcc-portfolio-astro.netlify.app/
+
 # Astro Starter Kit: Basics
 
 ```sh
