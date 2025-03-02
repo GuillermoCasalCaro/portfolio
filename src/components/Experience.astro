@@ -38,7 +38,7 @@ const { class: classname } = Astro.props;
 </section>
 
 <script>
-  function calculateMonths(startDate) {
+  function calculateMonths(startDate: string) {
     const start = new Date(startDate);
     const end = new Date();
     const diffInMonths =
@@ -50,13 +50,15 @@ const { class: classname } = Astro.props;
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const el = document.getElementsByClassName("last-experience-date");
-    if (el)
-      Array.from(el).forEach((el) => {
-        el.innerText = el.innerText.replace(
-          "<last-experience-date-replace-me>",
-          calculateMonths("2021-09-16")
-        );
+    const elements = document.getElementsByClassName("last-experience-date");
+    if (elements)
+      Array.from(elements).forEach((el) => {
+        if (el instanceof HTMLElement) {
+          el.innerText = el.innerText.replace(
+            "<last-experience-date-replace-me>",
+            calculateMonths("2021-09-16")
+          );
+        }
       });
   });
 </script>
