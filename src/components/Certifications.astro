@@ -1,0 +1,25 @@
+---
+const { class: classname } = Astro.props;
+---
+
+<!-- Add Microsoft Certified: Azure Fundamentals (AZ-900) with a link to https://www.credly.com/badges/7a3d96fb-e1af-4954-87c4-75eab3aaef0a/linked_in -->
+<section
+    id="certifications"
+    class={`items-center py-16 font-poppins ${classname}`}>
+    <h1 class="text-2xl font-bold pb-8">Certifications</h1>
+    <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+        <div class="w-full mx-auto lg:max-w-3xl">
+            <ul class="list-disc list-inside text-lg text-gray-200">
+                <li>
+                    <a
+                        href="https://www.credly.com/badges/7a3d96fb-e1af-4954-87c4-75eab3aaef0a/linked_in"
+                        class="text-white hover:text-yellow-400 transition-all duration-200 ease-in-out hover:underline underline-offset-4"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Microsoft Certified: Azure Fundamentals (AZ-900)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,19 +1,21 @@
 ---
+import Certifications from "../components/Certifications.astro";
 import Experience from "../components/Experience.astro";
 import Introduction from "../components/Introduction.astro";
 import Layout from "../layouts/Layout.astro";
 const META_DESCRIPTION =
-	"Explore the web development prowess of Guillermo, a skilled and innovative web developer with a passion for crafting " +
-	"exceptional online experiences. With several years in the field, Guillermo has honed expertise in front-end and " +
-	"back-end technologies, creating seamless and visually stunning websites. Dive into a portfolio showcasing a diverse range " +
-	"of projects, from responsive designs to dynamic web applications, each meticulously developed with a focus on user " +
-	"experience and cutting-edge technology. Join Guillermo on a journey through the digital realm, where every line of code " +
-	"is a testament to a commitment to excellence and a dedication to pushing the boundaries of web development.";
+    "Explore the web development prowess of Guillermo, a skilled and innovative web developer with a passion for crafting " +
+    "exceptional online experiences. With several years in the field, Guillermo has honed expertise in front-end and " +
+    "back-end technologies, creating seamless and visually stunning websites. Dive into a portfolio showcasing a diverse range " +
+    "of projects, from responsive designs to dynamic web applications, each meticulously developed with a focus on user " +
+    "experience and cutting-edge technology. Join Guillermo on a journey through the digital realm, where every line of code " +
+    "is a testament to a commitment to excellence and a dedication to pushing the boundaries of web development.";
 ---
 
-<Layout title="Portfolio - Guillermo Casal Caro" description={META_DESCRIPTION}>
-	<main class="mx-8">
-		<Introduction />
-		<Experience class="w-full mx-auto lg:w-[740px]" />
-	</main>
+<Layout title="Guillermo Casal Caro - Portfolio" description={META_DESCRIPTION}>
+    <main class="mx-8">
+        <Introduction />
+        <Experience class="w-full mx-auto lg:w-[740px]" />
+        <Certifications class="w-full mx-auto lg:w-[740px]" />
+    </main>
 </Layout>
