@@ -1,36 +1,38 @@
 <footer
-  class="rounded-lg m-4 bg-gray-900 w-full xl:w-[1120px] mx-auto mb-0 text-gray-300"
->
-  <div
-    class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
-  >
-    <span class="text-sm sm:text-center"
-      >© <span id="footer-year"></span> Guillermo Casal Caro.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
-      <li>
-        <a href="#home" class="hover:underline me-4 md:me-6">Home</a>
-      </li>
-      <li>
-        <a href="#experience" class="hover:underline me-4 md:me-6">Experience</a
-        >
-      </li>
-      <li>
-        <a href="#certifications" class="hover:underline me-4 md:me-6"
-          >Certifications</a
-        >
-      </li>
-      <li>
-        <a href="#about" class="hover:underline me-4 md:me-6">About</a>
-      </li>
-      <li>
-        <a href="#contact" class="hover:underline me-4 md:me-6">Contact</a>
-      </li>
-    </ul>
-  </div>
+    class="rounded-lg m-4 bg-gray-900 w-full xl:w-[1120px] mx-auto mb-0 text-gray-300">
+    <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm sm:text-center"
+            >© <span id="footer-year"></span> Guillermo Casal Caro
+        </span>
+        <ul
+            class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
+            <li>
+                <a href="#home" class="hover:underline me-4 md:me-6">Home</a>
+            </li>
+            <li>
+                <a href="#experience" class="hover:underline me-4 md:me-6"
+                    >Experience</a
+                >
+            </li>
+            <li>
+                <a href="#certifications" class="hover:underline me-4 md:me-6"
+                    >Certifications</a
+                >
+            </li>
+            <li>
+                <a href="#about" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+                <a href="#contact" class="hover:underline me-4 md:me-6"
+                    >Contact</a
+                >
+            </li>
+        </ul>
+    </div>
 </footer>
 
 <script>
-  const el = document.getElementById("footer-year");
-  if (el) el.textContent = String(new Date().getFullYear());
+    const el = document.getElementById("footer-year");
+    if (el) el.textContent = String(new Date().getFullYear());
 </script>
